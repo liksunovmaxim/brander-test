@@ -1,0 +1,132 @@
+extends layout
+block title
+ title Одна дверь
+block header
+ include header
+block content
+  main.main.product-page
+    .product-info
+      .col-5.product-info__slider-holder
+        .photo-slider
+          .photo-slider__preview
+            .photo-slider__preview-item
+              img(src="images/door-1.jpg", alt="Door-1")
+            .photo-slider__preview-item
+              img(src="images/door-2.jpg", alt="Door-2")
+            .photo-slider__preview-item
+              img(src="images/door-3.jpg", alt="Door-3")
+            .photo-slider__preview-item
+              img(src="images/door-4.jpg", alt="Door-4")
+          .photo-slider__tmbs
+            .photo-slider__tmb-item
+              img(src="images/door-tmb-1.jpg", alt="Door tmb 1")
+            .photo-slider__tmb-item
+              img(src="images/door-tmb-2.jpg", alt="Door tmb 2")
+            .photo-slider__tmb-item
+              img(src="images/door-tmb-3.jpg", alt="Door tmb 3")
+            .photo-slider__tmb-item
+              img(src="images/door-tmb-4.jpg", alt="Door tmb 4")
+      .col-6.product-info__content-holder
+        .product-content
+          - var breadcrumbsList = {"Главная":"#","Двери":"#"}
+          ul.breadcrumbs
+            each url, name in breadcrumbsList
+              li
+                a(href=url) #{name}
+          .product-content__header
+            h1 Двери Aspendos, пленка Глянец фантазия
+            ul.product-content__details
+              li.product-content__art-number 
+                span Артикул:&nbsp;
+                span.artn 4685123
+              li.product-content__producer    
+                span Производитель:&nbsp;
+                a(href="#") Новый Стиль
+              li.product-content__rating
+                ul.rating-line
+                  li
+                    span.icon.icon-rating-full
+                  li
+                    span.icon.icon-rating-full
+                  li
+                    span.icon.icon-rating-full
+                  li
+                    span.icon.icon-rating-full
+                  li
+                    span.icon.icon-rating-em
+                a.contrast-btn(href="#") 5 отзывов            
+            .row.product-content__product-prop
+              .product-content__choise-holder.col-6
+                dl.choise-block 
+                  dt 
+                    span Полотно, мм
+                    i.icon.icon-ask
+                  dd 
+                    select.choise-param
+                      option 600*2000
+                      option --Выбрать--
+                  dt 
+                    span Коробка, мм
+                    i.icon-ask
+                  dd 
+                    select.choise-param
+                      option Без коробки
+                      option 1234
+                  dt 
+                    span Наличник, мм
+                    i.icon-ask
+                  dd 
+                    select.choise-param
+                      option Без наличника
+                      option 1234
+                  dt 
+                    span Доборная доска, мм
+                    i.icon-ask
+                  dd 
+                    select.choise-param
+                      option Без доборной доски
+                      option 1234
+              .product-content__info-holder.col-6
+                .info-wrapper
+                  .info-block
+                    .title HOLZ рекомендует
+                    p 
+                      | При покупке лучше брать на 2 м<sub>2</sub> больше, чем требуется.
+                  a.b-btn--alt(href="#") Бесплатный замер
+        .product-content__footer
+          .buy-holder
+            .buy-holder__tag.col-6
+              .tag-container
+                .buy-holder__price-block
+                  span.buy-holder__sale-price 2100 
+                    i грн
+                  strong.buy-holder__true-price 31 252
+                    i грн
+                .buy-holder__buy-quantity
+                  p Количество
+                  .quantity-block
+                    button(type="button", class="q-plus") +
+                    input(type="text" class="q-input" value="1" min="1" max="50")
+                    button(type="button", class="q-minus") -
+                p Срок получения до 3 дней по Украине
+            .buy-holder__buttons.col-6
+              .button-container
+                a.b-btn(href="#") Купить
+                a.contrast-btn(href="#") Быстрая покупка
+        .product-content__share-holder
+          ul.share-list
+            li
+              a(href="#")
+                i.icon.icon-share
+                span Поделиться
+            li 
+              a(href="#")
+                i.icon.icon-print
+                span Печать страницы
+            li 
+              a(href="#")
+                i.icon.icon-download
+                span Скачать инструкцию
+
+block footer
+ include footer

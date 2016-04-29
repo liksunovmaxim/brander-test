@@ -1,0 +1,5 @@
+{
+  "name": "reset",
+  "main": ["_reset.scss"],
+  "ignore": []
+}

@@ -1,0 +1,61 @@
+header.header
+  .header__top
+    .top-menu-holder
+      div.top-menu-btn 
+        span Информация
+        i.ico-arrow
+      - var topMenu = {"Услуги":"uslugi.html", "Акции":"akcii.html", "Оплата и доставка":"odost.html", "Статьи":"statii.html", "Контакты":"contacts.html", "О нас":"onas.html"}
+      ul.header__top-menu
+        each val,index in topMenu
+          li
+            a(href=val) #{index}
+    ul.header__top-links
+      li
+        a.feedback-btn(href='#') 
+          span Обратный вызов
+          i.icon.icon-phone-in
+      li
+        a.register-btn(href='#') 
+         span Вход
+    .header__phones
+      span (044) 537-02-22
+      - var phones = ["(044) 537-02-22", "(044) 537-02-22", "(044) 537-02-24"]
+      i.ico-arrow
+      ul.header__phones-list
+        each val in phones
+          li
+            a(href='tel: ' + val) #{val}
+  .header__bottom
+    .logo
+      a(href="#")
+        svg
+          use(xlink:href="#holz-logo")
+    .header__mob-holder
+      nav.header__nav
+        .header__nav-btn
+          span Меню
+        - var mainMenu = {"Двери":"doors.html", "Пол":"floor.html", "Аксессуары":"accessories.html"}
+        ul
+          each val, index in mainMenu          
+            li
+              a(href='val') #{index}
+      .header__account
+        a(href="#")
+          i.icon.icon-account
+      .header__cart
+        a(href="#cart")
+          i.icon.icon-cart 
+          span.help-text Корзина
+      .header__locate-btn
+        a(href="#")
+          i.icon.icon-location
+          span Посмотреть салон
+      .header__search
+        form.header__search-form(action="")
+          input(type="text", id="search", placeholder='Поиск')
+          button(type="submit") 
+            i.icon.icon-search
+            span.help-text Поиск
+
+
+

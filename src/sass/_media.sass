@@ -1,0 +1,347 @@
+/*==========  Desktop First Method  ==========*/
+
+@media only screen and (max-width : 1400px)
+	.header
+		&__nav
+			ul
+				li
+					width: 110px
+		&__search
+			input
+				width: 120px
+	.photo-slider
+		&__preview-item
+			img
+				width: 100%				
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1170px)
+	.header
+		padding: 0 35px
+		&__top-menu
+			li
+				margin-right: 10px
+				a
+					@include kern(0)
+		&__nav
+			ul
+				li
+					width: auto
+					padding: 0 20px     
+	.buy-holder
+		&__tag
+			width: 70%
+		&__buttons
+			width: 30%
+
+
+@media only screen and (max-width : 1070px)
+	.header
+		&__bottom
+			.logo
+				margin-top: 8px
+				a
+					svg
+						width: 150px
+						height: 44px
+		&__nav
+			ul
+				li
+					padding: 0 15px             
+		&__search
+			input
+				width: 110px     
+				padding-left: 15px     
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 978px)
+	.ico-arrow
+		width: 23px
+		height: 10px
+		margin: 0 5px 0 10px  
+		&:after,
+		&:before
+			right: 10px    
+			width: 15px
+			height: 2px
+		&:after
+			right: 0px
+
+	.header
+		padding: 0
+		&__top
+			padding: 30px
+			&>*:after
+				content: ''
+				position: absolute
+				top: -10px
+				right: 0
+				display: inline-block
+				height: 48px
+				width: 2px
+				background-color: rgba(0, 0, 0, 0.1)             
+		.top-menu-holder
+			.top-menu-btn
+				display: block
+				font-size: 24px
+		&__top-menu
+				display: none 
+				position: absolute
+				z-index: 1
+				top: 120%
+				left: 0
+				width: 100%
+				padding: 0 0 10px
+				background-color: #fff
+				box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .1)    
+				li
+					float: none
+					display: block
+					padding: 10px 0 0
+					margin: 0
+					a
+						padding: 0 0 0 10px       
+						opacity: .75
+						font-size: 20px
+		&__phones
+			padding-left: 20px
+			margin-right: 70px
+			&:after
+				right: -20px
+			span
+				font-size: 24px
+		&__phones-list
+			li
+				padding: 20px 0 0
+				a
+					font-size: 24px
+					padding: 0 0 0 20px    
+		&__top-links
+			margin: 0
+			&:after
+				display: none        
+			li
+				display: none   
+				&:first-child:after
+					display: none                 
+			li:first-child
+				display: block        
+				span
+					display: none          
+				i
+					display: block          
+		&__bottom
+			background-color: transparent
+			.logo
+				display: block      
+				float: none
+				margin: 0 0 20px
+				text-align: center
+				font-size: 0
+				line-height: 0
+				a
+					display: inline-block
+					svg
+						width: 314px
+						height: 102px
+		&__mob-holder
+			display: flex
+			flex-direction: row
+			width: 100%
+			height: 100px
+			background-color: $main-color
+			&>*
+				position: relative      
+				float: none
+				width: 20% !important
+				height: 100px !important
+				border-right: 2px solid rgba(255, 255, 255, .15)
+				z-index: 1
+				background: $main-color
+				text-align: center		
+			i.icon
+				font-size: 44px
+				line-height: 100px
+				color: #fff
+
+		&__nav-btn				
+			display: block			
+		&__nav
+			order: 1
+			height: 100%
+			border: 0
+			text-align: center      
+			background-color: $main-color--alt
+			ul
+				display: none        
+		&__account
+			order: 3
+			display: block			
+			a
+				display: block
+		&__cart
+			order: 5
+			border: 0
+			a
+				background-color: $main-color
+		&__locate-btn
+			order: 4
+			a
+				line-height: 1.2
+				padding: 0
+				background-color: $main-color
+				&:hover
+					i
+						font-size: 44px
+			span
+				display: none				
+			i.icon
+				position: static
+		&__search
+			order: 2
+			input
+				display: none		
+			button
+				width: 100%	
+				text-align: center
+				padding: 0
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.ico-arrow
+		width: 11px
+		height: 6px
+		margin-bottom: 2px
+		&:after,
+		&:before
+			right: 6px    
+			width: 8px
+			height: 1px
+		&:after
+			right: 0px
+
+	.header
+		&__top
+			padding-top: 20px
+			padding-bottom: 20px
+			&>*:after
+				top: 0
+				height: 19px
+				width: 1px
+		.top-menu-holder
+			.top-menu-btn
+				font-size: 18px
+		&__top-menu  
+			li
+				a
+					padding: 0 0 0 10px       
+					font-size: 14px
+		&__phones
+			padding-left: 5px
+			margin-right: 20px
+			&:after
+				right: -10px
+			span
+				font-size: 18px
+		&__phones-list
+			li
+				padding-top: 10px
+				a
+					font-size: 18px
+					padding: 0 0 0 5px    
+		&__top-links         
+			li:first-child
+				i
+					font-size: 20px
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 640px)
+	.header
+		&__top
+			padding: 15px
+		&__bottom
+			.logo
+				margin-bottom: 10px
+				a
+					svg
+						width: 157px
+						height: 50px
+		&__mob-holder
+			height: 50px
+			&>*
+				height: 50px !important
+			i.icon
+				font-size: 22px
+				line-height: 50px
+		&__nav-btn
+			span
+				width: 25px
+				height: 2px
+				&:before, &:after
+					top: 9px
+					width: 25px
+				&:after
+					top: auto
+					bottom: 9px		
+		&__locate-btn
+			a
+				&:hover
+					i
+						font-size: 22px
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.header
+		.top-menu-holder
+			.top-menu-btn
+				padding: 0 5px
+				font-size: 14px
+		&__top-menu  
+			li
+				a
+					font-size: 13px
+		&__phones
+			margin-right: 20px
+			span
+				font-size: 14px
+		&__phones-list
+			li
+				padding-top: 10px
+				a
+					font-size: 14px
+					padding: 0 0 0 5px    
+		&__top-links      
+			li
+				padding: 0 5px   
+			li:first-child
+				i
+					font-size: 20px
+/* Custom */
+@media only screen and (max-width : 350px)
+	.header
+		&__top
+			padding-left: 5px
+			padding-right: 5px
+		.top-menu-holder
+			.top-menu-btn
+				font-size: 13px
+		&__top-menu  
+			li
+				a
+					padding-left: 5px
+		&__phones
+			margin-right: 15px
+			span
+				font-size: 13px
+		&__phones-list
+			li
+				padding-top: 10px
+				a
+					font-size: 14px
+					padding: 0 0 0 5px    
+		&__top-links      
+			li
+				padding: 0 5px   
+			li:first-child
+				i
+					font-size: 20px

@@ -1,0 +1,5 @@
+{
+  "name": "owl-carousel",
+  "main": ["owl-carousel/owl.carousel.js"],
+  "ignore": []
+}
