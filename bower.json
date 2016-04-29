@@ -1,0 +1,20 @@
+{
+  "name": "gulp-project",
+  "description": "Test work for Brander",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "bxslider-4": "bx-slider.js#^4.2.5",
+    "flexslider": "FlexSlider#^2.6.0"
+  }
+}

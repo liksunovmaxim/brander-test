@@ -1,0 +1,311 @@
+@import "includes/_reset.scss";
+@import "includes/_settings.scss";
+body{
+	font:16px $Museo-300;
+	color: #000;
+	background: #f7f7f7;
+	min-width:640px;
+}
+input{
+	border:none;
+	background:transparent;
+	outline: none;
+	font-size:16px;
+	color: #fff;
+	font-family: $Museo-300;
+}
+*::-webkit-input-placeholder {
+	text-transform: uppercase;
+    color: #fff;
+    opacity: 0.6;
+    font-family: $Museo-300;
+    font-size:14px;
+}
+*:-moz-placeholder {
+	text-transform: uppercase;
+    color: #fff;
+    opacity: 0.6;
+    font-family: $Museo-300;
+    font-size:14px;
+}
+*::-moz-placeholder {
+	text-transform: uppercase;
+    color: #fff;
+    opacity: 0.6;
+    font-family: $Museo-300;
+    font-size:14px;
+}
+*:-ms-input-placeholder {
+	text-transform: uppercase;
+    color: #fff;
+    opacity: 0.6;
+    font-family: $Museo-300;
+    font-size:14px;
+}
+h2{
+	font: 36px $Museo-700;
+	color: $grey;
+	text-transform: uppercase;
+}
+h4{
+	font:18px $Museo-700;
+	color: $grey;
+	text-transform:uppercase;
+}
+button{
+	background:transparent;
+	border: none;
+	outline:none;
+}
+select{
+	background:transparent;
+	border:none;
+	border-bottom: 1px solid #c2c2c2;
+	outline:none;
+	padding:2px 12% 11px 0;
+	font:16px $Museo-500 !important;
+	color: #000;
+	width:100%;
+	appearance: none;
+	background:url($sprite) no-repeat 97% 107%;
+	background-size:70px;
+}
+label{
+	font:12px $Museo-300;
+	color: $grey;
+	text-transform:uppercase;
+}
+img{
+	max-width: 100%;
+}
+a{
+	color: #000;
+	text-decoration:none;
+}
+a:hover{
+	text-decoration: underline;
+}
+.clearfix:after{
+	content:'';
+	display:block;
+	clear: both;
+}
+header{
+	width:100%;
+	display: flex;
+	background: #f7f7f7;
+}
+.header_holder{
+	width: 89.766082%;
+	margin: 0 auto;
+}
+.up_header{
+	display: block;
+	padding:15px 0 16px;
+	.info_menu{
+		width: 50%;
+		float:left;
+		ul>li{
+			display: inline-block;
+			font-size:14px;
+			margin: 0 5.5% 0 0;
+			a{
+				letter-spacing: 1px;
+			}
+		}
+		ul>li:last-child{
+			margin: 0;
+		}
+	}
+	.info_menu .mobile{
+		display: none;
+		padding: 0 20px 0 0;
+		background: url($sprite) no-repeat 100% 101.25%;
+		background-size: 75px;
+		cursor: pointer;
+	}
+}
+.call{
+	float:right;
+	width:50%;
+	text-align:right;
+	div{
+		vertical-align: top;
+	}
+}
+.else_cust{
+	display:inline-block;
+	padding: 2px 20px 0 0;
+	background: url($sprite) no-repeat 100% 101.25%;
+	background-size: 75px;
+	cursor:pointer;
+}
+.phone_select{
+	display:inline-block;
+	position: relative;
+	background:#f7f7f7;
+	font-size:14px;
+	min-width:124px;
+	ul{
+		display:none;
+		position: absolute;
+		top:100%;
+		left:0;	
+		background:#f7f7f7;
+	    padding: 0 5% 5%;
+    	margin: 0 0 0 -5%;
+        z-index: 10;
+	}
+}
+.activeDown{
+	pointer-events:none;
+}
+.sign{
+	display:inline-block;
+	width: 38%;
+	ul>li{
+		display: inline-block;
+		margin: 0 11% 0 0;
+			a,span{
+				color: #293894;
+				font: 14px $Museo-700;
+			}
+		}
+	:last-child{
+		margin:0;
+		position: relative
+	}
+}
+.logo_holder{
+	max-width: 185px;
+	a{
+		display: block;
+	}
+}
+.sign>ul>li:last-child:before{
+	content: '';
+	position: absolute;
+	top:-5%;
+	left: -50%;
+	width:1px;
+	height: 19px;
+	background: #d9d9d9;
+}
+.log_in_mobile{
+	display:none !important;
+}
+.bottom_header{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content:stretch;
+	font-size:0;
+}
+.bottom_header>div{
+	flex-grow:1;
+	display: flex;
+	flex-wrap:wrap;
+	align-content:center;
+}
+.main_menu{
+	background: $orange;
+	flex-grow: 8 !important;
+	max-width:650px;
+	ul{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content:stretch;
+		li{
+			display: inline-block;
+			height: 60px;
+			overflow: hidden;
+			flex-grow:1;
+			a{
+				display: block;
+				text-align: center;
+				font: 14px $Museo-700;
+				color: #fff;
+				text-transform: uppercase;
+				padding: 22px 0;
+				text-decoration: none !important;
+				border-right: 1px solid #ffab33;
+			}
+		}
+	}
+}
+.search{
+	background: $orange;
+	flex-grow:2;
+}
+
+.search_holder{
+	display:flex;
+	flex-wrap:wrap;
+	align-items: center;
+	justify-content:center;
+	width:90%;
+	padding: 0 5%;
+	form{
+		width:100%;
+	}
+	button{
+		width:19px;
+		height:19px;
+		background: url($sprite) no-repeat -1px -1px;
+	    margin: 1px 0 0 7px;
+	    cursor:pointer;
+	}
+	input{
+	    vertical-align: top;
+    	margin: 1px 0 0;
+    	width:85%;
+	}
+}
+
+.watch{
+	background: #293894;
+	a{
+		display:flex;
+		flex-wrap:wrap;
+		align-items: center;
+		justify-content:center;
+		width: 100%;
+		text-decoration: none !important;
+		padding: 0 5%;
+		span{
+			font: 14px $Museo-700;
+			color: #fff;
+			text-transform: uppercase;
+		}
+		:last-child{
+			padding: 0 0 0 15px;
+		}
+	}
+}
+.watch_icon{
+	display:inline-block;
+	width:17px;
+	height:22px;
+	background: url($sprite) no-repeat -1px -21px;
+}
+
+.basket{
+	background: #141a3c;
+	flex-grow:0.5;
+	a{
+		display:flex;
+		flex-wrap:wrap;
+		align-items: center;
+		justify-content:center;
+		width: 100%;
+		min-width:60px;
+		span{
+			display: inline-block;
+			width: 20px;
+			height: 23px;
+			background: url($sprite) no-repeat -1px -44px;
+		}
+	}
+}
